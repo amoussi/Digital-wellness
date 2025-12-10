@@ -1,4 +1,4 @@
 ﻿{
-  "buildCommand": "npm run build",
+  "buildCommand": "echo 'Skipping build - using pre-built dist'",
   "outputDirectory": "dist"
 }
