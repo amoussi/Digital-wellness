@@ -1,4 +1,3 @@
 ﻿{
-  "buildCommand": "echo 'Skipping build - using pre-built dist'",
-  "outputDirectory": "dist"
+  "framework": "vite"
 }
