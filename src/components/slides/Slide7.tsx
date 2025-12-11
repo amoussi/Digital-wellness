@@ -1,31 +1,30 @@
-import { Calendar, CalendarDays, CalendarRange, Hourglass } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide7() {
   const perspectives = [
     { 
-      icon: Calendar,
+      emoji: '📅',
       period: 'Per Week', 
       value: '42 hours',
       color: 'from-gray-700 to-gray-600',
       bg: 'bg-gray-800/50'
     },
     { 
-      icon: CalendarDays,
+      emoji: '📆',
       period: 'Per Month', 
       value: '180 hours',
       color: 'from-gray-700 to-gray-600',
       bg: 'bg-gray-800/50'
     },
     { 
-      icon: CalendarRange,
+      emoji: '🗓️',
       period: 'Per Year', 
       value: '91 days',
       color: 'from-indigo-700 to-indigo-600',
       bg: 'bg-indigo-900/30'
     },
     { 
-      icon: Hourglass,
+      emoji: '⏳',
       period: 'By Age 70', 
       value: '17+ YEARS',
       color: 'from-pink-600 to-pink-400',

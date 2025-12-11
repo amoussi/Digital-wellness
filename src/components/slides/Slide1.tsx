@@ -1,4 +1,3 @@
-import { Smartphone } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide1() {
@@ -16,7 +15,7 @@ export function Slide1() {
       {/* Multiple phone outlines in background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center gap-8 opacity-5">
         {[...Array(5)].map((_, i) => (
-          <Smartphone key={i} className="w-32 h-32 text-white" strokeWidth={1} />
+          <span key={i} className="text-6xl">📱</span>
         ))}
       </div>
 
@@ -26,7 +25,7 @@ export function Slide1() {
         <div className="flex justify-center mb-8">
           <div className="relative">
             <div className="absolute inset-0 bg-white/30 rounded-3xl blur-3xl"></div>
-            <Smartphone className="relative w-32 h-32 text-white" strokeWidth={1.5} />
+            <span className="relative text-9xl block">📱</span>
           </div>
         </div>
 

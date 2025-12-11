@@ -1,4 +1,4 @@
-import { AlertTriangle } from 'lucide-react';
+
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide11() {
@@ -38,7 +38,7 @@ export function Slide11() {
               key={index}
               className="bg-orange-500/10 rounded-2xl border-2 border-orange-500/40 p-8 flex items-center gap-4 hover:scale-105 transition-transform"
             >
-              <AlertTriangle className="w-12 h-12 text-orange-400 flex-shrink-0" strokeWidth={2} />
+              <span className="text-3xl flex-shrink-0">⚠️</span>
               <p className="text-2xl text-gray-200">{warning}</p>
             </div>
           ))}

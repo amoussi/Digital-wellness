@@ -1,30 +1,29 @@
-import { Brain, Frown, Smartphone, AlertCircle } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide8() {
   const stats = [
     { 
-      icon: Brain,
+      emoji: '🧠',
       value: '+50%', 
       label: 'Anxiety since 2010',
       sublabel: 'risen sharply',
       color: 'from-pink-600 to-pink-400'
     },
     { 
-      icon: Frown,
+      emoji: '😟',
       value: '2x', 
       label: 'Depression risk',
       sublabel: '3+ hrs/day',
       color: 'from-red-600 to-red-400'
     },
     { 
-      icon: Smartphone,
+      emoji: '📱',
       value: '96', 
       label: 'Phone checks per day',
       color: 'from-purple-600 to-purple-400'
     },
     { 
-      icon: AlertCircle,
+      emoji: '⚠️',
       value: '70%', 
       label: 'Teens anxious without phone',
       color: 'from-orange-600 to-orange-400'

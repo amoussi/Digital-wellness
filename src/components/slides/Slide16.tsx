@@ -1,9 +1,8 @@
-import { BarChart3, AlertTriangle, CheckCircle } from 'lucide-react';
+
 
 export function Slide16() {
   const columns = [
     {
-      icon: BarChart3,
       emoji: '📊',
       title: 'THE REALITY',
       items: [
@@ -14,7 +13,6 @@ export function Slide16() {
       color: 'from-blue-600 to-blue-400'
     },
     {
-      icon: AlertTriangle,
       emoji: '⚠️',
       title: 'THE COST',
       items: [
@@ -25,7 +23,6 @@ export function Slide16() {
       color: 'from-red-600 to-red-400'
     },
     {
-      icon: CheckCircle,
       emoji: '✅',
       title: 'THE SOLUTION',
       items: [
@@ -53,16 +50,14 @@ export function Slide16() {
         {/* 3 Columns */}
         <div className="flex-1 grid grid-cols-3 gap-8">
           {columns.map((column, index) => {
-            const Icon = column.icon;
             return (
               <div
                 key={index}
                 className={`bg-gradient-to-br ${column.color} bg-opacity-10 rounded-2xl border-2 border-gray-700/50 p-8 flex flex-col hover:scale-105 transition-transform`}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Icon className="w-12 h-12 text-white" strokeWidth={2} />
                   <h3 className="text-2xl text-white font-bold">
-                    {column.emoji} {column.title}
+                    <span className="text-3xl mr-2">{column.emoji}</span> {column.title}
                   </h3>
                 </div>
                 <div className="space-y-4 flex-1">

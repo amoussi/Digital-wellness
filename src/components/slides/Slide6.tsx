@@ -1,5 +1,4 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import { Users, Wifi, TrendingUp } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide6() {
@@ -13,20 +12,20 @@ export function Slide6() {
 
   const facts = [
     { 
-      icon: Wifi,
+      emoji: '📶',
       value: '33.9M', 
       label: 'internet users',
       sublabel: '(73%)',
       color: 'from-indigo-600 to-indigo-400'
     },
     { 
-      icon: TrendingUp,
+      emoji: '📈',
       value: '110%', 
       label: 'mobile connections',
       color: 'from-purple-600 to-purple-400'
     },
     { 
-      icon: Users,
+      emoji: '👥',
       value: '70%', 
       label: 'under 30 years old',
       color: 'from-pink-600 to-pink-400'
@@ -93,7 +92,6 @@ export function Slide6() {
           {/* RIGHT: Fact boxes */}
           <div className="space-y-4">
             {facts.map((fact, index) => {
-              const Icon = fact.icon;
               return (
                 <div 
                   key={index}

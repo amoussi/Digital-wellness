@@ -1,5 +1,4 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { TrendingUp, Clock } from 'lucide-react';
 
 export function Slide4() {
   const internetUsersData = [
@@ -37,7 +36,7 @@ export function Slide4() {
           {/* LEFT GRAPH - Internet Users */}
           <div className="bg-gray-800/50 rounded-2xl border border-indigo-500/30 p-6 flex flex-col">
             <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="w-6 h-6 text-indigo-400" />
+              <span className="text-2xl">📈</span>
               <h3 className="text-2xl text-indigo-300">INTERNET USERS (Billions)</h3>
             </div>
             <div className="flex-1">
@@ -88,7 +87,7 @@ export function Slide4() {
           {/* RIGHT GRAPH - Screen Time */}
           <div className="bg-gray-800/50 rounded-2xl border border-pink-500/30 p-6 flex flex-col">
             <div className="flex items-center gap-3 mb-4">
-              <Clock className="w-6 h-6 text-pink-400" />
+              <span className="text-2xl">⏱️</span>
               <h3 className="text-2xl text-pink-300">SCREEN TIME (Hours/day)</h3>
             </div>
             <div className="flex-1">

@@ -1,4 +1,4 @@
-import { Users, Heart, Zap, TrendingDown } from 'lucide-react';
+
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide10() {
@@ -24,15 +24,15 @@ export function Slide10() {
         {/* Big comparison */}
         <div className="flex items-center justify-center gap-8 mb-6 flex-1">
           <div className="text-center">
-            <Users className="w-20 h-20 text-indigo-400 mb-2 mx-auto" />
+            <span className="text-5xl mb-2 block">👥</span>
             <div className="text-6xl text-indigo-400 mb-1">338</div>
             <p className="text-lg text-gray-300">Facebook friends</p>
           </div>
 
-          <Zap className="w-12 h-12 text-yellow-500" />
+          <span className="text-3xl text-yellow-500">⚡</span>
 
           <div className="text-center">
-            <Heart className="w-20 h-20 text-green-400 mb-2 mx-auto" />
+            <span className="text-5xl mb-2 block">❤️</span>
             <div className="text-6xl text-green-400 mb-1">4</div>
             <p className="text-lg text-gray-300">Actual close friends</p>
           </div>

@@ -1,32 +1,28 @@
-import { Eye, Shield, RefreshCw } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide12() {
   const steps = [
     { 
       number: 1,
-      icon: Eye,
+      emoji: '👁️',
       title: 'AWARENESS', 
       subtitle: 'Track your usage',
-      emoji: '👁️',
       color: 'from-indigo-600 to-indigo-400',
       bg: 'bg-indigo-500/10'
     },
     { 
       number: 2,
-      icon: Shield,
+      emoji: '🚧',
       title: 'BOUNDARIES', 
       subtitle: 'Set limits',
-      emoji: '🚧',
       color: 'from-purple-600 to-purple-400',
       bg: 'bg-purple-500/10'
     },
     { 
       number: 3,
-      icon: RefreshCw,
+      emoji: '🔄',
       title: 'REPLACEMENT', 
       subtitle: 'Better activities',
-      emoji: '🔄',
       color: 'from-green-600 to-green-400',
       bg: 'bg-green-500/10'
     }
@@ -49,15 +45,17 @@ export function Slide12() {
           <div className="inline-block px-4 py-2 bg-green-500/20 rounded-lg border border-green-500/40 mb-4">
             <span className="text-green-300 uppercase tracking-wider">Part 3: Solutions</span>
           </div>
-          <h1 className="text-6xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            TAKING BACK CONTROL 💪
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-6xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              TAKING BACK CONTROL
+            </h1>
+            <span className="text-6xl">💪</span>
+          </div>
         </div>
 
         {/* 3 Big numbered steps */}
         <div className="flex-1 space-y-3">
           {steps.map((step) => {
-            const Icon = step.icon;
             return (
               <div
                 key={step.number}
@@ -66,7 +64,7 @@ export function Slide12() {
                 <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-4xl text-white flex-shrink-0 shadow-lg`}>
                   {step.number}
                 </div>
-                <Icon className="w-12 h-12 text-white" strokeWidth={2} />
+                <span className="text-3xl">{step.emoji}</span>
                 <div>
                   <h3 className={`text-3xl bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-1 font-bold`}>
                     {step.title}

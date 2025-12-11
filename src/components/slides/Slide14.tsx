@@ -1,19 +1,17 @@
-import { Eye, Clock, X, CheckCircle } from 'lucide-react';
+
 
 export function Slide14() {
   const rules = [
     {
-      icon: Eye,
+      emoji: '👁️',
       title: '20-20-20 Rule',
       description: 'Every 20 min → Look 20 feet → For 20 seconds',
-      emoji: '👁️',
       color: 'from-indigo-600 to-indigo-400'
     },
     {
-      icon: Clock,
+      emoji: '⏰',
       title: '10-Minute Rule',
       description: 'Wait 10 min. 70% of urges pass.',
-      emoji: '⏰',
       color: 'from-purple-600 to-purple-400'
     }
   ];

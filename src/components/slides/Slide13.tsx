@@ -1,11 +1,8 @@
-import { Smartphone, Bed, Coffee, Moon, Bell } from 'lucide-react';
-
 export function Slide13() {
   const columns = [
     {
-      icon: Smartphone,
-      title: 'Track Usage',
       emoji: '📱',
+      title: 'Track Usage',
       items: [
         'iPhone: Screen Time',
         'Android: Digital Wellbeing',
@@ -14,9 +11,8 @@ export function Slide13() {
       color: 'from-indigo-600 to-indigo-400'
     },
     {
-      icon: Bed,
-      title: 'Phone-Free Zones',
       emoji: '📵',
+      title: 'Phone-Free Zones',
       items: [
         '🛏️ Bedroom',
         '🍽️ Dining table',
@@ -25,9 +21,8 @@ export function Slide13() {
       color: 'from-purple-600 to-purple-400'
     },
     {
-      icon: Bell,
-      title: 'Notifications',
       emoji: '🔔',
+      title: 'Notifications',
       items: [
         'Turn off non-essential',
         'Check only 3x/day',
@@ -53,14 +48,13 @@ export function Slide13() {
         {/* 3 Columns */}
         <div className="flex-1 grid grid-cols-3 gap-6">
           {columns.map((column, index) => {
-            const Icon = column.icon;
             return (
               <div
                 key={index}
                 className={`bg-gradient-to-br ${column.color} bg-opacity-10 rounded-2xl border-2 border-gray-700/50 p-6 flex flex-col hover:scale-105 transition-transform`}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Icon className="w-10 h-10 text-white" strokeWidth={2} />
+                  <span className="text-3xl">{column.emoji}</span>
                   <h3 className={`text-2xl text-white font-bold`}>
                     {column.title}
                   </h3>
