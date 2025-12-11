@@ -37,25 +37,22 @@ export function Slide14() {
 
         {/* 2 Rule boxes */}
         <div className="grid grid-cols-2 gap-6 mb-6">
-          {rules.map((rule, index) => {
-            const Icon = rule.icon;
-            return (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${rule.color} bg-opacity-10 rounded-2xl border-2 border-indigo-500/40 p-6 hover:scale-105 transition-transform`}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon className="w-10 h-10 text-white" strokeWidth={2} />
-                  <h3 className="text-2xl text-white font-bold">
-                    {rule.title} {rule.emoji}
-                  </h3>
-                </div>
-                <p className="text-xl text-gray-100 leading-relaxed font-medium">
-                  {rule.description}
-                </p>
+          {rules.map((rule, index) => (
+            <div
+              key={index}
+              className={`bg-gradient-to-br ${rule.color} bg-opacity-10 rounded-2xl border-2 border-indigo-500/40 p-6 hover:scale-105 transition-transform`}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">{rule.emoji}</span>
+                <h3 className="text-2xl text-white font-bold">
+                  {rule.title}
+                </h3>
               </div>
-            );
-          })}
+              <p className="text-xl text-gray-100 leading-relaxed font-medium">
+                {rule.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Replacement table */}
@@ -68,11 +65,11 @@ export function Slide14() {
                 className="grid grid-cols-2 gap-4 bg-gray-900/80 rounded-lg p-4 border border-gray-600/50"
               >
                 <div className="flex items-center gap-3">
-                  <X className="w-6 h-6 text-red-300 flex-shrink-0" />
+                  <span className="text-2xl">{item.badEmoji}</span>
                   <span className="text-lg text-gray-100 font-medium">{item.bad}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-300 flex-shrink-0" />
+                  <span className="text-2xl">{item.goodEmoji}</span>
                   <span className="text-lg text-gray-100 font-medium">{item.good}</span>
                 </div>
               </div>

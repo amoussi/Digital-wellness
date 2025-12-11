@@ -60,25 +60,22 @@ export function Slide7() {
 
         {/* Grid of boxes - like stairs */}
         <div className="flex-1 grid grid-cols-2 gap-4">
-          {perspectives.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className={`${item.bg} rounded-2xl border-2 ${
-                  item.highlight 
-                    ? 'border-pink-500/60 ring-4 ring-pink-500/30 shadow-2xl shadow-pink-500/30' 
-                    : 'border-gray-700/50'
-                } p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform`}
-              >
-                <Icon className="w-12 h-12 mb-3 text-white p-2 rounded-lg" />
-                <div className="text-gray-200 text-lg mb-2 font-semibold">{item.period}</div>
-                <div className="text-4xl text-white font-bold">
-                  {item.value}
-                </div>
+          {perspectives.map((item, index) => (
+            <div
+              key={index}
+              className={`${item.bg} rounded-2xl border-2 ${
+                item.highlight 
+                  ? 'border-pink-500/60 ring-4 ring-pink-500/30 shadow-2xl shadow-pink-500/30' 
+                  : 'border-gray-700/50'
+              } p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform`}
+            >
+              <span className="text-4xl mb-3">{item.emoji}</span>
+              <div className="text-gray-200 text-lg mb-2 font-semibold">{item.period}</div>
+              <div className="text-4xl text-white font-bold">
+                {item.value}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {/* Footer */}

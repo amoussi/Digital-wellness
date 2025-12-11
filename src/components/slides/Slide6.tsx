@@ -91,25 +91,23 @@ export function Slide6() {
 
           {/* RIGHT: Fact boxes */}
           <div className="space-y-4">
-            {facts.map((fact, index) => {
-              return (
-                <div 
-                  key={index}
-                  className={`bg-gradient-to-r ${fact.color} bg-opacity-10 rounded-2xl border-2 border-indigo-500/40 p-6 hover:scale-105 transition-transform`}
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    <Icon className="w-10 h-10 text-white p-2 rounded-lg" />
-                    <div className="text-5xl text-white font-bold">
-                      {fact.value}
-                    </div>
+            {facts.map((fact, index) => (
+              <div 
+                key={index}
+                className={`bg-gradient-to-r ${fact.color} bg-opacity-10 rounded-2xl border-2 border-indigo-500/40 p-6 hover:scale-105 transition-transform`}
+              >
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="text-4xl">{fact.emoji}</span>
+                  <div className="text-5xl text-white font-bold">
+                    {fact.value}
                   </div>
-                  <div className="text-xl text-gray-100 font-semibold">{fact.label}</div>
-                  {fact.sublabel && (
-                    <div className="text-gray-200 font-medium">{fact.sublabel}</div>
-                  )}
                 </div>
-              );
-            })}
+                <div className="text-xl text-gray-100 font-semibold">{fact.label}</div>
+                {fact.sublabel && (
+                  <div className="text-gray-200 font-medium">{fact.sublabel}</div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

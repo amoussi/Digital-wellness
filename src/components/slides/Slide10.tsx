@@ -41,13 +41,13 @@ export function Slide10() {
         {/* 2 stat boxes */}
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-pink-500/10 rounded-2xl border-2 border-pink-500/40 p-6 text-center hover:scale-105 transition-transform">
-            <TrendingDown className="w-12 h-12 text-pink-400 mb-3 mx-auto" />
+            <span className="text-4xl mb-3 block">⚡</span>
             <div className="text-5xl text-pink-400 mb-2">3x</div>
             <p className="text-lg text-gray-300">Loneliness tripled</p>
           </div>
 
           <div className="bg-pink-500/10 rounded-2xl border-2 border-pink-500/40 p-6 text-center hover:scale-105 transition-transform">
-            <TrendingDown className="w-12 h-12 text-red-400 mb-3 mx-auto" />
+            <span className="text-4xl mb-3 block">⚡</span>
             <div className="text-5xl text-red-400 mb-2">-30%</div>
             <p className="text-lg text-gray-300">Face-to-face declined</p>
           </div>

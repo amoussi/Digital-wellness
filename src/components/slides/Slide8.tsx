@@ -54,24 +54,21 @@ export function Slide8() {
 
         {/* 2x2 Grid of stat boxes */}
         <div className="flex-1 grid grid-cols-2 gap-4">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${stat.color} bg-opacity-10 rounded-2xl border-2 border-pink-500/40 p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform`}
-              >
-                <Icon className="w-12 h-12 mb-3 text-white p-2 rounded-lg" />
-                <div className="text-5xl text-white mb-2 font-bold">
-                  {stat.value}
-                </div>
-                <div className="text-lg text-gray-100 mb-1 font-semibold">{stat.label}</div>
-                {stat.sublabel && (
-                  <div className="text-sm text-gray-200 font-medium">{stat.sublabel}</div>
-                )}
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`bg-gradient-to-br ${stat.color} bg-opacity-10 rounded-2xl border-2 border-pink-500/40 p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform`}
+            >
+              <span className="text-4xl mb-3">{stat.emoji}</span>
+              <div className="text-5xl text-white mb-2 font-bold">
+                {stat.value}
               </div>
-            );
-          })}
+              <div className="text-lg text-gray-100 mb-1 font-semibold">{stat.label}</div>
+              {stat.sublabel && (
+                <div className="text-sm text-gray-200 font-medium">{stat.sublabel}</div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
