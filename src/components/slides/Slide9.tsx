@@ -65,8 +65,18 @@ export function Slide9() {
                 className={`${impact.bg} ${impact.color} border-l-8 rounded-2xl p-8 flex flex-col justify-center hover:scale-105 transition-transform`}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <Icon className="w-12 h-12 text-white" strokeWidth={2} />
-                  <h3 className="text-3xl text-white font-bold">{impact.title}</h3>
+                  <Icon className={`w-12 h-12 ${
+                    index === 0 ? 'text-blue-400' :
+                    index === 1 ? 'text-orange-400' :
+                    index === 2 ? 'text-purple-300' :
+                    'text-pink-400'
+                  }`} strokeWidth={2} />
+                  <h3 className={`text-3xl font-bold ${
+                    index === 0 ? 'text-blue-400' :
+                    index === 1 ? 'text-orange-400' :
+                    index === 2 ? 'text-purple-300' :
+                    'text-pink-400'
+                  }`}>{impact.title}</h3>
                 </div>
                 <p className="text-2xl text-gray-100 leading-relaxed font-semibold">
                   {impact.stat}
