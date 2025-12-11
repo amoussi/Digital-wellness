@@ -59,12 +59,14 @@ export function Slide15() {
         </div>
 
         {/* Tip box */}
-        <div className="bg-yellow-500/10 rounded-2xl border-2 border-yellow-500/50 p-8">
-          <div className="flex items-center gap-4">
-            <Coffee className="w-12 h-12 text-yellow-300 flex-shrink-0" strokeWidth={2} />
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div className="flex items-center gap-6">
+            <div className="animate-bounce bg-gradient-to-br from-blue-300 to-cyan-400 rounded-2xl p-4 shadow-lg">
+              <Coffee className="w-20 h-20 text-white flex-shrink-0" strokeWidth={2} />
+            </div>
             <div>
-              <h3 className="text-2xl text-yellow-200 mb-2 font-bold">PHONE STACK GAME:</h3>
-              <p className="text-xl text-gray-100 font-medium">
+              <h3 className="text-3xl text-white mb-2 font-bold">PHONE STACK GAME:</h3>
+              <p className="text-xl text-white font-semibold">
                 Stack phones at café. First to grab pays! ☕
               </p>
             </div>

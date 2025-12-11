@@ -72,7 +72,12 @@ export function Slide3() {
                 } p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform`}
               >
                 <Icon className="w-12 h-12 mb-3 text-white p-2 rounded-lg" />
-                <div className="text-4xl text-white mb-2 font-bold">
+                <div className={`text-4xl mb-2 font-bold ${
+                  index === 0 ? 'text-indigo-400' :
+                  index === 1 ? 'text-indigo-400' :
+                  index === 2 ? 'text-indigo-400' :
+                  'text-pink-400'
+                }`}>
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-100 font-medium">{stat.label}</div>
