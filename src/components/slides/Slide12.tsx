@@ -55,23 +55,23 @@ export function Slide12() {
         </div>
 
         {/* 3 Big numbered steps */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-3">
           {steps.map((step) => {
             const Icon = step.icon;
             return (
               <div
                 key={step.number}
-                className={`${step.bg} rounded-2xl border-2 border-gray-700/50 p-8 flex items-center gap-6 hover:scale-105 transition-transform`}
+                className={`${step.bg} rounded-2xl border-2 border-gray-700/50 p-6 flex items-center gap-4 hover:scale-105 transition-transform`}
               >
-                <div className={`w-24 h-24 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-5xl text-white flex-shrink-0 shadow-lg`}>
+                <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-4xl text-white flex-shrink-0 shadow-lg`}>
                   {step.number}
                 </div>
-                <Icon className="w-16 h-16 text-white" strokeWidth={2} />
+                <Icon className="w-12 h-12 text-white" strokeWidth={2} />
                 <div>
-                  <h3 className={`text-4xl bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-1 font-bold`}>
+                  <h3 className={`text-3xl bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-1 font-bold`}>
                     {step.title}
                   </h3>
-                  <p className="text-2xl text-gray-200 flex items-center gap-2 font-semibold">
+                  <p className="text-lg text-gray-200 flex items-center gap-2 font-semibold">
                     {step.subtitle} {step.emoji}
                   </p>
                 </div>
