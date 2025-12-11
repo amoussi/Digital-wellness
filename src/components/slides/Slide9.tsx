@@ -1,31 +1,30 @@
-import { Eye, Bone, Moon, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function Slide9() {
   const impacts = [
     { 
-      icon: Eye,
+      emoji: '👁️',
       title: 'EYES', 
       stat: '65% eye strain',
       color: 'border-blue-500',
       bg: 'bg-blue-500/10'
     },
     { 
-      icon: Bone,
+      emoji: '🦴',
       title: 'BODY', 
       stat: '+27kg spine pressure, 80% neck pain',
       color: 'border-orange-500',
       bg: 'bg-orange-500/10'
     },
     { 
-      icon: Moon,
+      emoji: '🌙',
       title: 'SLEEP', 
       stat: '-50% melatonin, +1 hour to fall asleep',
       color: 'border-purple-500',
       bg: 'bg-purple-500/10'
     },
     { 
-      icon: Zap,
+      emoji: '⚡',
       title: 'FOCUS', 
       stat: '23 min to refocus, -40% productivity',
       color: 'border-pink-500',
@@ -50,27 +49,24 @@ export function Slide9() {
           <div className="inline-block px-4 py-2 bg-pink-500/20 rounded-lg border border-pink-500/40 mb-4">
             <span className="text-pink-300 uppercase tracking-wider">Part 2: Health Impacts</span>
           </div>
-          <h1 className="text-5xl bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
-            YOUR BODY ON SCREENS 🏥
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-5xl bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
+              YOUR BODY ON SCREENS
+            </h1>
+            <span className="text-5xl">🏥</span>
+          </div>
         </div>
 
         {/* 2x2 Grid of impact boxes */}
         <div className="flex-1 grid grid-cols-2 gap-6">
           {impacts.map((impact, index) => {
-            const Icon = impact.icon;
             return (
               <div
                 key={index}
                 className={`${impact.bg} ${impact.color} border-l-8 rounded-2xl p-8 flex flex-col justify-center hover:scale-105 transition-transform`}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <Icon className={`w-12 h-12 ${
-                    index === 0 ? 'text-blue-400' :
-                    index === 1 ? 'text-orange-400' :
-                    index === 2 ? 'text-purple-300' :
-                    'text-pink-400'
-                  }`} strokeWidth={2} />
+                  <span className="text-5xl">{impact.emoji}</span>
                   <h3 className={`text-3xl font-bold ${
                     index === 0 ? 'text-blue-400' :
                     index === 1 ? 'text-orange-400' :
